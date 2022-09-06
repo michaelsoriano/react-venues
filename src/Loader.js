@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
 
-function Loader(props){
-    if(props.loading){
-      return <div className="Loading"><span>{props.text}</span></div>
-    }else{
-      return <React.Fragment></React.Fragment>
-    }
+function Loader(props) {
+  props.loading ? (
+    <div className="Loading">
+      <span>{props.text}</span>
+    </div>
+  ) : (
+    ""
+  );
 }
 
 export default Loader;
